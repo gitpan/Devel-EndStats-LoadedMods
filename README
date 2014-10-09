@@ -3,7 +3,7 @@ NAME
     running code
 
 VERSION
-    This document describes version 0.01 of Devel::EndStats::LoadedMods
+    This document describes version 0.02 of Devel::EndStats::LoadedMods
     (from Perl distribution Devel-EndStats-LoadedMods), released on
     2014-10-09.
 

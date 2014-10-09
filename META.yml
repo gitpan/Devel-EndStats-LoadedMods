@@ -20,7 +20,7 @@ resources:
   bugtracker: https://rt.cpan.org/Public/Dist/Display.html?Name=Devel-EndStats-LoadedMods
   homepage: https://metacpan.org/release/Devel-EndStats-LoadedMods
   repository: git://github.com/perlancar/perl-Devel-EndStats-LoadedMods.git
-version: '0.01'
+version: '0.02'
 x_Dist_Zilla:
   perl:
     version: '5.018002'

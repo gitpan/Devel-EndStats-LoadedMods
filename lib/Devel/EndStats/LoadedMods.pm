@@ -1,11 +1,12 @@
 package Devel::EndStats::LoadedMods;
 
 our $DATE = '2014-10-09'; # DATE
-our $VERSION = '0.01'; # VERSION
+our $VERSION = '0.02'; # VERSION
 
 END {
     print "# BEGIN stats from Devel::EndStats::LoadedMods\n";
     for my $file (sort keys %INC) {
+        next if $file =~ m!^/!;
         my $pkg = $file; $pkg =~ s!/!::!g; $pkg =~ s/\.pm$//;
         my $ver = ${"$pkg\::VERSION"};
         $ver = 'undef' unless defined $ver;
@@ -29,7 +30,7 @@ Devel::EndStats::LoadedMods - Display run time and dependencies after running co
 
 =head1 VERSION
 
-This document describes version 0.01 of Devel::EndStats::LoadedMods (from Perl distribution Devel-EndStats-LoadedMods), released on 2014-10-09.
+This document describes version 0.02 of Devel::EndStats::LoadedMods (from Perl distribution Devel-EndStats-LoadedMods), released on 2014-10-09.
 
 =head1 SYNOPSIS
 
