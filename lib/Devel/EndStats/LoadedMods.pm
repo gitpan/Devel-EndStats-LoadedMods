@@ -1,10 +1,11 @@
 package Devel::EndStats::LoadedMods;
 
-our $DATE = '2014-10-09'; # DATE
-our $VERSION = '0.02'; # VERSION
+our $DATE = '2014-10-10'; # DATE
+our $VERSION = '0.03'; # VERSION
 
 END {
     print "# BEGIN stats from Devel::EndStats::LoadedMods\n";
+    print "perl ($^V)\n";
     for my $file (sort keys %INC) {
         next if $file =~ m!^/!;
         my $pkg = $file; $pkg =~ s!/!::!g; $pkg =~ s/\.pm$//;
@@ -16,7 +17,7 @@ END {
 }
 
 1;
-# ABSTRACT: Display run time and dependencies after running code
+# ABSTRACT: Display loaded modules and their versions at the end of program run
 
 __END__
 
@@ -26,11 +27,11 @@ __END__
 
 =head1 NAME
 
-Devel::EndStats::LoadedMods - Display run time and dependencies after running code
+Devel::EndStats::LoadedMods - Display loaded modules and their versions at the end of program run
 
 =head1 VERSION
 
-This document describes version 0.02 of Devel::EndStats::LoadedMods (from Perl distribution Devel-EndStats-LoadedMods), released on 2014-10-09.
+This document describes version 0.03 of Devel::EndStats::LoadedMods (from Perl distribution Devel-EndStats-LoadedMods), released on 2014-10-10.
 
 =head1 SYNOPSIS
 
@@ -41,7 +42,18 @@ This document describes version 0.02 of Devel::EndStats::LoadedMods (from Perl d
  <normal script output, if any...>
 
  # BEGIN stats from Devel::EndStats::LoadedMods
-
+ perl (5.18.2)
+ Data::Dump (1.22)
+ Devel::EndStats::LoadedMods (0.02)
+ Exporter (5.70)
+ feature (1.32)
+ overload (1.22)
+ overloading (0.02)
+ strict (1.07)
+ subs (1.01)
+ vars (1.03)
+ warnings (1.18)
+ warnings::register (1.02)
  # END stats
 
 =head1 DESCRIPTION

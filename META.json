@@ -1,5 +1,5 @@
 {
-   "abstract" : "Display run time and dependencies after running code",
+   "abstract" : "Display loaded modules and their versions at the end of program run",
    "author" : [
       "perlancar <perlancar@cpan.org>"
    ],
@@ -48,7 +48,7 @@
          "web" : "https://github.com/perlancar/perl-Devel-EndStats-LoadedMods"
       }
    },
-   "version" : "0.02",
+   "version" : "0.03",
    "x_Dist_Zilla" : {
       "perl" : {
          "version" : "5.018002"

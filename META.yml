@@ -1,5 +1,5 @@
 ---
-abstract: 'Display run time and dependencies after running code'
+abstract: 'Display loaded modules and their versions at the end of program run'
 author:
   - 'perlancar <perlancar@cpan.org>'
 build_requires:
@@ -20,7 +20,7 @@ resources:
   bugtracker: https://rt.cpan.org/Public/Dist/Display.html?Name=Devel-EndStats-LoadedMods
   homepage: https://metacpan.org/release/Devel-EndStats-LoadedMods
   repository: git://github.com/perlancar/perl-Devel-EndStats-LoadedMods.git
-version: '0.02'
+version: '0.03'
 x_Dist_Zilla:
   perl:
     version: '5.018002'
